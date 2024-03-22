@@ -1,7 +1,6 @@
 import './App.css';
 import { Component } from 'react';
 import Customer from './components/Customers';
-import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableHead from '@mui/material/TableHead';
 import TableBody from '@mui/material/TableBody';
@@ -40,7 +39,6 @@ const customers = [{
 
 class App extends Component{
   render(){
-    const{classes}=this.props;
     return(
       <div>
         <Table>
