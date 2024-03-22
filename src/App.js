@@ -1,6 +1,15 @@
 import './App.css';
 import { Component } from 'react';
 import Customer from './components/Customers';
+import Paper from '@mui/material/Paper';
+import Table from '@mui/material/Table';
+import TableHead from '@mui/material/TableHead';
+import TableBody from '@mui/material/TableBody';
+import TableRow from '@mui/material/TableRow';
+import TableCell from '@mui/material/TableCell';
+
+
+
 
 
 const customers = [{
@@ -31,9 +40,22 @@ const customers = [{
 
 class App extends Component{
   render(){
+    const{classes}=this.props;
     return(
       <div>
-      {
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>번호</TableCell>
+              <TableCell>이미지</TableCell>
+              <TableCell>이름</TableCell>
+              <TableCell>생년월일</TableCell>
+              <TableCell>성별</TableCell>
+              <TableCell>직업</TableCell>
+            </TableRow>
+          </TableHead>
+        <TableBody>
+        {
         customers.map(c=>{
           return(
             <Customer
@@ -48,6 +70,8 @@ class App extends Component{
           )
         })
       }
+        </TableBody>
+        </Table>
       </div>
     );
   }
